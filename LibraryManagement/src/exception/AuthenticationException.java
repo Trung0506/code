@@ -1,0 +1,10 @@
+package exception;
+
+/** Đăng nhập thất bại. */
+public class AuthenticationException extends LibraryException {
+    private static final long serialVersionUID = 1L;
+
+    public AuthenticationException(String message) {
+        super(message);
+    }
+}

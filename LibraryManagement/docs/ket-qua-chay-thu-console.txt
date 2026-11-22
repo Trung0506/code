@@ -1,0 +1,452 @@
+
+======== HỆ THỐNG QUẢN LÝ THƯ VIỆN ========
+1. Đăng nhập
+2. Tạo tài khoản mới
+0. Thoát chương trình
+Chọn chức năng: 
+======== ĐĂNG NHẬP HỆ THỐNG QUẢN LÝ THƯ VIỆN ========
+Tên đăng nhập: Mật khẩu: [LỖI] Sai tên đăng nhập hoặc mật khẩu
+  (Còn 2 lần thử)
+Tên đăng nhập: Mật khẩu: [OK] Đăng nhập thành công. Xin chào Quản trị thư viện!
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: Mã     | Tên sách                           | Tác giả                  | Thể loại     | SL   | Giá trị
+-------+------------------------------------+--------------------------+--------------+------+----------
+S001   | Lập trình Java cơ bản              | Nguyễn Văn Hiệp          | CNTT         |    4 | 150.000đ
+S002   | Cấu trúc dữ liệu và giải thuật     | Trần Đức Minh            | CNTT         |    2 | 120.000đ
+S003   | Cơ sở dữ liệu                      | Lê Thanh Hà              | CNTT         |    3 | 130.000đ
+S004   | Mạng máy tính                      | Phạm Quốc Bảo            | CNTT         |    3 | 140.000đ
+S005   | Giải tích 1                        | Nguyễn Đình Trí          | Toán         |    6 | 85.000đ
+S006   | Đại số tuyến tính                  | Lê Hồng Sơn              | Toán         |    4 | 80.000đ
+S007   | Vật lý đại cương                   | Lương Duyên Bình         | Vật lý       |    5 | 95.000đ
+S008   | Tiếng Anh chuyên ngành CNTT        | Hoàng Văn Vân            | Ngoại ngữ    |    2 | 70.000đ
+S009   | Kinh tế vi mô                      | Nguyễn Văn Công          | Kinh tế      |    3 | 90.000đ
+S010   | Triết học Mác - Lênin              | Bộ Giáo dục và Đào tạo   | Lý luận      |    8 | 60.000đ
+S011   | Clean Code                         | Robert C. Martin         | CNTT         |    1 | 250.000đ
+S012   | Thiết kế hướng đối tượng với UML   | Đặng Văn Đức             | CNTT         |    0 | 110.000đ
+Tổng: 12 đầu sách
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: Nhập mã hoặc tên sách cần tìm: Mã     | Tên sách                           | Tác giả                  | Thể loại     | SL   | Giá trị
+-------+------------------------------------+--------------------------+--------------+------+----------
+S001   | Lập trình Java cơ bản              | Nguyễn Văn Hiệp          | CNTT         |    4 | 150.000đ
+Tổng: 1 đầu sách
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: 1. Theo tên sách (A-Z)
+2. Theo số lượng giảm dần
+3. Theo giá trị tăng dần
+Chọn tiêu chí: Mã     | Tên sách                           | Tác giả                  | Thể loại     | SL   | Giá trị
+-------+------------------------------------+--------------------------+--------------+------+----------
+S010   | Triết học Mác - Lênin              | Bộ Giáo dục và Đào tạo   | Lý luận      |    8 | 60.000đ
+S005   | Giải tích 1                        | Nguyễn Đình Trí          | Toán         |    6 | 85.000đ
+S007   | Vật lý đại cương                   | Lương Duyên Bình         | Vật lý       |    5 | 95.000đ
+S006   | Đại số tuyến tính                  | Lê Hồng Sơn              | Toán         |    4 | 80.000đ
+S001   | Lập trình Java cơ bản              | Nguyễn Văn Hiệp          | CNTT         |    4 | 150.000đ
+S003   | Cơ sở dữ liệu                      | Lê Thanh Hà              | CNTT         |    3 | 130.000đ
+S009   | Kinh tế vi mô                      | Nguyễn Văn Công          | Kinh tế      |    3 | 90.000đ
+S004   | Mạng máy tính                      | Phạm Quốc Bảo            | CNTT         |    3 | 140.000đ
+S002   | Cấu trúc dữ liệu và giải thuật     | Trần Đức Minh            | CNTT         |    2 | 120.000đ
+S008   | Tiếng Anh chuyên ngành CNTT        | Hoàng Văn Vân            | Ngoại ngữ    |    2 | 70.000đ
+S011   | Clean Code                         | Robert C. Martin         | CNTT         |    1 | 250.000đ
+S012   | Thiết kế hướng đối tượng với UML   | Đặng Văn Đức             | CNTT         |    0 | 110.000đ
+Tổng: 12 đầu sách
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: Mã sách: Số lượng muốn mượn: [KHÔNG ĐỦ] Sách "Thiết kế hướng đối tượng với UML" chỉ còn 0 cuốn, không đủ 1 cuốn.
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: --- Thêm sách mới ---
+Tên sách: Tác giả: Thể loại: Số lượng: Giá trị sách (đồng): [OK] Đã thêm sách mã S013
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: Mã sách cần xóa: S001   | Lập trình Java cơ bản              | Nguyễn Văn Hiệp          | CNTT         |    4 | 150.000đ
+Xác nhận xóa sách này? (y/n): [LỖI] Không thể xóa sách S001 vì đang có phiếu mượn chưa trả chứa sách này
+
+======== QUẢN LÝ SÁCH ========
+1. Hiển thị danh sách sách
+2. Thêm sách
+3. Sửa sách
+4. Xóa sách
+5. Tìm kiếm (theo mã hoặc tên sách)
+6. Sắp xếp danh sách
+7. Kiểm tra sách còn đủ số lượng để mượn
+0. Quay lại
+Chọn chức năng: 
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== QUẢN LÝ BẠN ĐỌC ========
+1. Hiển thị danh sách bạn đọc
+2. Thêm bạn đọc
+3. Sửa bạn đọc
+4. Xóa bạn đọc
+5. Tìm kiếm (theo mã hoặc họ tên)
+6. Sắp xếp danh sách
+7. Xem quy định mượn - trả của một bạn đọc
+0. Quay lại
+Chọn chức năng: Mã       | Họ tên                 | SĐT          | Loại bạn đọc      | Đang mượn
+---------+------------------------+--------------+-------------------+----------
+SV01     | Nguyễn Văn An          | 0901000001   | Sinh viên thường | 1/3 cuốn
+SV02     | Trần Thị Bình          | 0901000002   | Sinh viên thường | 0/3 cuốn
+SV03     | Lê Minh Châu           | 0901000003   | Sinh viên thường | 0/3 cuốn
+UT01     | Phạm Thu Dung          | 0902000001   | Sinh viên ưu tiên | 2/5 cuốn
+UT02     | Hoàng Gia Huy          | 0902000002   | Sinh viên ưu tiên | 0/5 cuốn
+GV01     | Đỗ Quang Khải          | 0903000001   | Giảng viên | 0/10 cuốn
+GV02     | Vũ Mai Lan             | 0903000002   | Giảng viên | 0/10 cuốn
+Tổng: 7 bạn đọc
+
+======== QUẢN LÝ BẠN ĐỌC ========
+1. Hiển thị danh sách bạn đọc
+2. Thêm bạn đọc
+3. Sửa bạn đọc
+4. Xóa bạn đọc
+5. Tìm kiếm (theo mã hoặc họ tên)
+6. Sắp xếp danh sách
+7. Xem quy định mượn - trả của một bạn đọc
+0. Quay lại
+Chọn chức năng: --- Thêm bạn đọc mới ---
+Họ tên: Số điện thoại:   1. Sinh viên thường
+  2. Sinh viên ưu tiên
+  3. Giảng viên
+  Chọn loại bạn đọc: [LỖI] Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và có 10-11 chữ số): 123
+
+======== QUẢN LÝ BẠN ĐỌC ========
+1. Hiển thị danh sách bạn đọc
+2. Thêm bạn đọc
+3. Sửa bạn đọc
+4. Xóa bạn đọc
+5. Tìm kiếm (theo mã hoặc họ tên)
+6. Sắp xếp danh sách
+7. Xem quy định mượn - trả của một bạn đọc
+0. Quay lại
+Chọn chức năng: --- Thêm bạn đọc mới ---
+Họ tên: Số điện thoại:   1. Sinh viên thường
+  2. Sinh viên ưu tiên
+  3. Giảng viên
+  Chọn loại bạn đọc: [OK] Đã thêm bạn đọc mã UT03 (Sinh viên ưu tiên)
+
+======== QUẢN LÝ BẠN ĐỌC ========
+1. Hiển thị danh sách bạn đọc
+2. Thêm bạn đọc
+3. Sửa bạn đọc
+4. Xóa bạn đọc
+5. Tìm kiếm (theo mã hoặc họ tên)
+6. Sắp xếp danh sách
+7. Xem quy định mượn - trả của một bạn đọc
+0. Quay lại
+Chọn chức năng: Mã bạn đọc: Đỗ Quang Khải - Giảng viên | Tối đa 10 cuốn | Hạn mượn 30 ngày | Phạt 2.000đ/ngày trễ | Giảng viên: hạn mượn dài nhất, phạt thấp nhất.
+(Gợi ý: loại bạn đọc trong hệ thống: 1 = SV thường, 2 = SV ưu tiên, 3 = Giảng viên)
+
+======== QUẢN LÝ BẠN ĐỌC ========
+1. Hiển thị danh sách bạn đọc
+2. Thêm bạn đọc
+3. Sửa bạn đọc
+4. Xóa bạn đọc
+5. Tìm kiếm (theo mã hoặc họ tên)
+6. Sắp xếp danh sách
+7. Xem quy định mượn - trả của một bạn đọc
+0. Quay lại
+Chọn chức năng: 
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== MƯỢN SÁCH ========
+Mã bạn đọc: Bạn đọc: Nguyễn Văn An - Sinh viên thường | Đang mượn 1/3 cuốn | Hạn mượn 14 ngày
+  Mã sách:   -> Lập trình Java cơ bản (hiện có 4 cuốn)
+  Số lượng muốn mượn:   Mượn thêm sách khác trong phiếu này? (y/n): Ngày mượn (dd/MM/yyyy, Enter = 15/11/2026): [KHÔNG CHO MƯỢN] Bạn đọc Nguyễn Văn An chỉ được mượn tối đa 3 cuốn (đang mượn 1, muốn mượn thêm 3 => vượt 1 cuốn).
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== MƯỢN SÁCH ========
+Mã bạn đọc: Bạn đọc: Trần Thị Bình - Sinh viên thường | Đang mượn 0/3 cuốn | Hạn mượn 14 ngày
+  Mã sách:   -> Cấu trúc dữ liệu và giải thuật (hiện có 2 cuốn)
+  Số lượng muốn mượn:   Mượn thêm sách khác trong phiếu này? (y/n): Ngày mượn (dd/MM/yyyy, Enter = 15/11/2026): [KHÔNG CHO MƯỢN] Số lượng mượn của sách S002 phải lớn hơn 0 (nhập: 0)
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== MƯỢN SÁCH ========
+Mã bạn đọc: Bạn đọc: Trần Thị Bình - Sinh viên thường | Đang mượn 0/3 cuốn | Hạn mượn 14 ngày
+  Mã sách:   -> Thiết kế hướng đối tượng với UML (hiện có 0 cuốn)
+  Số lượng muốn mượn:   Mượn thêm sách khác trong phiếu này? (y/n): Ngày mượn (dd/MM/yyyy, Enter = 15/11/2026): [KHÔNG CHO MƯỢN] Sách "Thiết kế hướng đối tượng với UML" (S012) đã hết, không thể cho mượn
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== MƯỢN SÁCH ========
+Mã bạn đọc: Bạn đọc: Trần Thị Bình - Sinh viên thường | Đang mượn 0/3 cuốn | Hạn mượn 14 ngày
+  Mã sách:   -> Lập trình Java cơ bản (hiện có 4 cuốn)
+  Số lượng muốn mượn:   Mượn thêm sách khác trong phiếu này? (y/n):   Mã sách:   -> Mạng máy tính (hiện có 3 cuốn)
+  Số lượng muốn mượn:   Mượn thêm sách khác trong phiếu này? (y/n): Ngày mượn (dd/MM/yyyy, Enter = 15/11/2026): [OK] Đã tạo phiếu mượn thành công!
+Phiếu PM0005 | Bạn đọc: SV02 - Trần Thị Bình (Sinh viên thường)
+   Ngày mượn: 15/11/2026 | Hẹn trả: 29/11/2026 | Trạng thái: Đang mượn
+   - S001 Lập trình Java cơ bản x1
+   - S004 Mạng máy tính x1
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== TRẢ SÁCH ========
+Mã phiếu mượn: Phiếu PM0001 | Bạn đọc: SV01 - Nguyễn Văn An (Sinh viên thường)
+   Ngày mượn: 26/10/2026 | Hẹn trả: 09/11/2026 | Trạng thái: Đang mượn
+   - S001 Lập trình Java cơ bản x1
+Ngày trả thực tế (dd/MM/yyyy, Enter = 15/11/2026): [OK] Đã trả sách thành công, phiếu chuyển sang trạng thái "Đã trả".
+  Trả QUÁ HẠN 6 ngày => phí phạt: 30.000đ
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== TRẢ SÁCH ========
+Mã phiếu mượn: Phiếu PM0001 | Bạn đọc: SV01 - Nguyễn Văn An (Sinh viên thường)
+   Ngày mượn: 26/10/2026 | Hẹn trả: 09/11/2026 | Trạng thái: Đã trả
+   - S001 Lập trình Java cơ bản x1
+   Đã trả ngày 15/11/2026 | Trễ 6 ngày | Phạt 30.000đ
+Ngày trả thực tế (dd/MM/yyyy, Enter = 15/11/2026): [KHÔNG TRẢ ĐƯỢC] Phiếu mượn PM0001 đã ở trạng thái "Đã trả", không thể trả lại.
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== TRẢ SÁCH ========
+Mã phiếu mượn: Ngày trả thực tế (dd/MM/yyyy, Enter = 15/11/2026): [KHÔNG TRẢ ĐƯỢC] Không tìm thấy phiếu mượn có mã: PM9999
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== TRẢ SÁCH ========
+Mã phiếu mượn: Phiếu PM0005 | Bạn đọc: SV02 - Trần Thị Bình (Sinh viên thường)
+   Ngày mượn: 15/11/2026 | Hẹn trả: 29/11/2026 | Trạng thái: Đang mượn
+   - S001 Lập trình Java cơ bản x1
+   - S004 Mạng máy tính x1
+Ngày trả thực tế (dd/MM/yyyy, Enter = 15/11/2026): [OK] Đã trả sách thành công, phiếu chuyển sang trạng thái "Đã trả".
+  Trả đúng hạn, không bị phạt.
+
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== DANH SÁCH PHIẾU MƯỢN ========
+1. Tất cả phiếu mượn
+2. Phiếu đang mượn
+3. Phiếu đã trả
+4. Phiếu quá hạn (đang mượn, quá ngày hẹn trả)
+5. Tra cứu phiếu theo mã
+0. Quay lại
+Chọn chức năng: Phiếu PM0001 | Bạn đọc: SV01 - Nguyễn Văn An (Sinh viên thường)
+   Ngày mượn: 26/10/2026 | Hẹn trả: 09/11/2026 | Trạng thái: Đã trả
+   - S001 Lập trình Java cơ bản x1
+   Đã trả ngày 15/11/2026 | Trễ 6 ngày | Phạt 30.000đ
+Phiếu PM0002 | Bạn đọc: UT01 - Phạm Thu Dung (Sinh viên ưu tiên)
+   Ngày mượn: 05/11/2026 | Hẹn trả: 26/11/2026 | Trạng thái: Đang mượn
+   - S002 Cấu trúc dữ liệu và giải thuật x2
+Phiếu PM0003 | Bạn đọc: SV02 - Trần Thị Bình (Sinh viên thường)
+   Ngày mượn: 16/10/2026 | Hẹn trả: 30/10/2026 | Trạng thái: Đã trả
+   - S001 Lập trình Java cơ bản x1
+   Đã trả ngày 03/11/2026 | Trễ 4 ngày | Phạt 20.000đ
+Phiếu PM0004 | Bạn đọc: GV01 - Đỗ Quang Khải (Giảng viên)
+   Ngày mượn: 26/09/2026 | Hẹn trả: 26/10/2026 | Trạng thái: Đã trả
+   - S003 Cơ sở dữ liệu x1
+   Đã trả ngày 31/10/2026 | Trễ 5 ngày | Phạt 10.000đ
+Phiếu PM0005 | Bạn đọc: SV02 - Trần Thị Bình (Sinh viên thường)
+   Ngày mượn: 15/11/2026 | Hẹn trả: 29/11/2026 | Trạng thái: Đã trả
+   - S001 Lập trình Java cơ bản x1
+   - S004 Mạng máy tính x1
+   Đã trả ngày 15/11/2026 | Trễ 0 ngày | Phạt 0đ
+Tổng: 5 phiếu
+
+======== DANH SÁCH PHIẾU MƯỢN ========
+1. Tất cả phiếu mượn
+2. Phiếu đang mượn
+3. Phiếu đã trả
+4. Phiếu quá hạn (đang mượn, quá ngày hẹn trả)
+5. Tra cứu phiếu theo mã
+0. Quay lại
+Chọn chức năng: (Không có phiếu mượn nào)
+
+======== DANH SÁCH PHIẾU MƯỢN ========
+1. Tất cả phiếu mượn
+2. Phiếu đang mượn
+3. Phiếu đã trả
+4. Phiếu quá hạn (đang mượn, quá ngày hẹn trả)
+5. Tra cứu phiếu theo mã
+0. Quay lại
+Chọn chức năng: 
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: 
+======== THỐNG KÊ ========
+1. Tổng quan thư viện
+2. Top 5 sách được mượn nhiều nhất
+3. Tổng phí phạt đã thu
+4. Phiếu mượn quá hạn chưa trả
+5. Số bạn đọc theo loại
+0. Quay lại
+Chọn chức năng: Số đầu sách            : 13
+Số cuốn trong kho      : 45
+Số cuốn đang được mượn : 2
+Phiếu đang mượn        : 1
+Phiếu đã trả           : 4
+Tổng phí phạt đã thu   : 60.000đ
+
+======== THỐNG KÊ ========
+1. Tổng quan thư viện
+2. Top 5 sách được mượn nhiều nhất
+3. Tổng phí phạt đã thu
+4. Phiếu mượn quá hạn chưa trả
+5. Số bạn đọc theo loại
+0. Quay lại
+Chọn chức năng: #1 S001   Lập trình Java cơ bản              : 3 lượt cuốn
+#2 S002   Cấu trúc dữ liệu và giải thuật     : 2 lượt cuốn
+#3 S003   Cơ sở dữ liệu                      : 1 lượt cuốn
+#4 S004   Mạng máy tính                      : 1 lượt cuốn
+
+======== THỐNG KÊ ========
+1. Tổng quan thư viện
+2. Top 5 sách được mượn nhiều nhất
+3. Tổng phí phạt đã thu
+4. Phiếu mượn quá hạn chưa trả
+5. Số bạn đọc theo loại
+0. Quay lại
+Chọn chức năng: Tổng phí phạt đã thu: 60.000đ
+
+======== THỐNG KÊ ========
+1. Tổng quan thư viện
+2. Top 5 sách được mượn nhiều nhất
+3. Tổng phí phạt đã thu
+4. Phiếu mượn quá hạn chưa trả
+5. Số bạn đọc theo loại
+0. Quay lại
+Chọn chức năng: 
+======== MENU CHÍNH - Thủ thư: Quản trị thư viện ========
+1. Quản lý sách
+2. Quản lý bạn đọc
+3. Mượn sách
+4. Trả sách
+5. Danh sách phiếu mượn
+6. Thống kê
+0. Đăng xuất
+Chọn chức năng: Đã đăng xuất.
+Đăng nhập bằng tài khoản khác? (y/n): Tạm biệt!

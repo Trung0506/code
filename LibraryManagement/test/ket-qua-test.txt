@@ -1,0 +1,221 @@
+
+=== TEST 1: Mượn sách còn số lượng thành công ===
+  [PASS] phiếu có mã PM0001
+  [PASS] trạng thái phiếu = Đang mượn
+  [PASS] kho S001 giảm 10 -> 8
+  [PASS] ngày mượn được lưu
+  [PASS] ngày hẹn trả = ngày mượn + 14 (sinh viên thường)
+
+=== TEST 2: Các trường hợp mượn sách bị từ chối ===
+  [PASS] Mượn sách đã hết (S003 = 0)
+         lỗi hiển thị: Sách "Cơ sở dữ liệu" (S003) đã hết, không thể cho mượn
+  [PASS] Mượn nhiều hơn số còn lại (S002 còn 1, mượn 2)
+         lỗi hiển thị: Sách "Cấu trúc dữ liệu" (S002) chỉ còn 1 cuốn, không đủ 2 cuốn theo yêu cầu
+  [PASS] Sinh viên thường đang giữ 2, mượn thêm 2 => tổng 4 vượt tối đa 3
+         lỗi hiển thị: Bạn đọc Nguyễn Văn An chỉ được mượn tối đa 3 cuốn (đang mượn 2, muốn mượn thêm 2 => vượt 1 cuốn).
+  [PASS] kho S001 không đổi sau lần mượn bị từ chối (vẫn 8)
+  [PASS] Số lượng mượn = 0
+         lỗi hiển thị: Số lượng mượn của sách S001 phải lớn hơn 0 (nhập: 0)
+  [PASS] Số lượng mượn < 0
+         lỗi hiển thị: Số lượng mượn của sách S001 phải lớn hơn 0 (nhập: -1)
+  [PASS] Sách không tồn tại
+         lỗi hiển thị: Không tìm thấy sách có mã: S999
+  [PASS] Bạn đọc không tồn tại
+         lỗi hiển thị: Không tìm thấy bạn đọc có mã: XX99
+  [PASS] Phiếu nhiều sách có 1 sách hết hàng
+         lỗi hiển thị: Sách "Cơ sở dữ liệu" (S003) đã hết, không thể cho mượn
+  [PASS] Không trừ kho dở dang (S001 vẫn 8)
+  [PASS] Không tạo phiếu thừa (vẫn 1 phiếu)
+
+=== TEST 3: Trả sách đúng hạn ===
+  [PASS] không trễ, phí phạt = 0
+  [PASS] kho S001 tăng lại 8 -> 10
+  [PASS] trạng thái phiếu = Đã trả
+  [PASS] ngày trả thực tế được lưu
+
+=== TEST 4: Trả sách sai quy định ===
+  [PASS] Trả lại phiếu đã ở trạng thái Đã trả
+         lỗi hiển thị: Phiếu mượn PM0001 đã ở trạng thái "Đã trả", không thể trả lại.
+  [PASS] kho không bị cộng lần 2 (vẫn 10)
+  [PASS] Phiếu mượn không tồn tại
+         lỗi hiển thị: Không tìm thấy phiếu mượn có mã: PM9999
+  [PASS] Ngày trả trước ngày mượn
+         lỗi hiển thị: Ngày trả (2026-10-31) không thể trước ngày mượn (2026-11-01)
+  [PASS] phiếu vẫn Đang mượn sau lần trả lỗi
+
+=== TEST 5: Trả quá hạn 3 ngày - phí phạt theo từng loại bạn đọc ===
+  [PASS] Sinh viên thường: 3 ngày x 5.000 = 15.000đ
+  [PASS] Sinh viên ưu tiên: hạn mượn 21 ngày
+  [PASS] Sinh viên ưu tiên: 3 ngày x 3.000 = 9.000đ
+  [PASS] Giảng viên: hạn mượn 30 ngày
+  [PASS] Giảng viên: 3 ngày x 2.000 = 6.000đ
+  [PASS] Trễ đúng 1 ngày vẫn bị phạt (2.000đ)
+         Phiếu PM0002 | Trả ngày 18/11/2026 | Trễ 3 ngày | Phạt 15.000đ
+
+=== TEST 6: Giới hạn số cuốn và hạn mượn theo loại bạn đọc (tính theo TỔNG số cuốn đang giữ) ===
+  [PASS] Sinh viên thường: tối đa 3 cuốn / 14 ngày
+  [PASS] Sinh viên ưu tiên: tối đa 5 cuốn / 21 ngày
+  [PASS] Giảng viên: tối đa 10 cuốn / 30 ngày
+  [PASS] SV thường mượn đúng bằng giới hạn (3/3) thành công
+  [PASS] SV thường đã giữ 3/3, mượn thêm 1 cuốn (sách khác) bị từ chối
+         lỗi hiển thị: Bạn đọc Nguyễn Văn An chỉ được mượn tối đa 3 cuốn (đang mượn 3, muốn mượn thêm 1 => vượt 1 cuốn).
+  [PASS] Kho S004 không đổi sau lần bị từ chối (vẫn 10)
+  [PASS] SV ưu tiên mượn 6 cuốn bị từ chối (tối đa 5)
+         lỗi hiển thị: Bạn đọc Trần Thị Bình chỉ được mượn tối đa 5 cuốn (đang mượn 0, muốn mượn thêm 6 => vượt 1 cuốn).
+  [PASS] Giảng viên mượn 11 cuốn trong một phiếu bị từ chối (tối đa 10)
+         lỗi hiển thị: Bạn đọc Lê Văn Cường chỉ được mượn tối đa 10 cuốn (đang mượn 0, muốn mượn thêm 11 => vượt 1 cuốn).
+  [PASS] Giảng viên mượn đúng 10 cuốn thành công, hạn trả sau 30 ngày
+  [PASS] SV ưu tiên mượn đúng 5 cuốn thành công, hạn trả sau 21 ngày
+  [PASS] Sau khi trả, số đang giữ về 0 và mượn lại được
+  [PASS] Phiếu thứ hai 3 cuốn: tổng 3 + 3 = 6 > 5 bị từ chối (cộng dồn nhiều phiếu)
+         lỗi hiển thị: Bạn đọc Trần Thị Bình chỉ được mượn tối đa 5 cuốn (đang mượn 3, muốn mượn thêm 3 => vượt 1 cuốn).
+  [PASS] SV thường: một phiếu gồm 2 đầu sách, tổng 4 cuốn cũng bị từ chối (tối đa 3)
+         lỗi hiển thị: Bạn đọc Nguyễn Văn An chỉ được mượn tối đa 3 cuốn (đang mượn 0, muốn mượn thêm 4 => vượt 1 cuốn).
+  [PASS] Hai phiếu 3 + 2 = 5 cuốn thì được phép (SV ưu tiên)
+
+=== TEST 7: Ghi / đọc file nhị phân .dat ===
+  [PASS] đọc lại 4 sách
+  [PASS] đọc lại 5 phiếu mượn
+  [PASS] số lượng S001 sau đọc lại = 10
+  [PASS] phiếu PM0002 còn nguyên phí phạt 15.000đ
+  [PASS] đọc lại đúng kiểu con LecturerReader (đa hình được giữ)
+  [PASS] FinePolicy của giảng viên sau đọc lại = 2.000đ/ngày
+  [PASS] file chưa tồn tại -> danh sách rỗng, không lỗi
+
+=== TEST 8: instanceof + ép kiểu (ReaderInfoService) ===
+         Phạm Giảng - Giảng viên | Tối đa 10 cuốn | Hạn mượn 30 ngày | Phạt 2.000đ/ngày trễ | Giảng viên: hạn mượn dài nhất, phạt thấp nhất.
+  [PASS] Nhận ra giảng viên: 10 cuốn / 30 ngày / 2.000đ
+  [PASS] User không phải Reader được nhận biết
+
+==============================
+KẾT QUẢ: 54 đạt, 0 lỗi
+==============================
+exit ServiceTest: 0
+
+=== TEST 1: Dữ liệu mẫu tự tạo lần chạy đầu và ghi file .dat ===
+  [PASS] 12 đầu sách mẫu
+  [PASS] 7 bạn đọc mẫu
+  [PASS] 4 phiếu mượn mẫu
+  [PASS] 4 file .dat được tạo
+  [PASS] có sách hết hàng để demo (S012 = 0)
+
+=== TEST 2: Đăng nhập ===
+  [PASS] admin / admin123 đăng nhập được, vai trò Thủ thư
+  [PASS] Sai mật khẩu
+         lỗi hiển thị: Sai tên đăng nhập hoặc mật khẩu
+  [PASS] Tài khoản không tồn tại (cùng thông báo, không lộ tài khoản nào có thật)
+         lỗi hiển thị: Sai tên đăng nhập hoặc mật khẩu
+  [PASS] Tên đăng nhập null
+         lỗi hiển thị: Sai tên đăng nhập hoặc mật khẩu
+  [PASS] SHA-256 đúng chuẩn (vector kiểm thử của 'abc')
+
+=== TEST 2b: Tạo tài khoản thủ thư (AuthService.register) ===
+  [PASS] tạo thành công, mã TT03 (đã có TT01, TT02), vai trò Thủ thư
+  [PASS] đăng nhập được bằng tài khoản vừa tạo
+  [PASS] Tên đăng nhập đã tồn tại
+         lỗi hiển thị: Tên đăng nhập 'thumoi' đã tồn tại
+  [PASS] Tên đăng nhập trùng khác hoa/thường (THUTHU ~ thuthu)
+         lỗi hiển thị: Tên đăng nhập 'THUTHU' đã tồn tại
+  [PASS] Tên đăng nhập quá ngắn
+         lỗi hiển thị: Tên đăng nhập phải có ít nhất 3 ký tự và không chứa khoảng trắng
+  [PASS] Tên đăng nhập có khoảng trắng
+         lỗi hiển thị: Tên đăng nhập phải có ít nhất 3 ký tự và không chứa khoảng trắng
+  [PASS] Mật khẩu quá ngắn
+         lỗi hiển thị: Mật khẩu phải có ít nhất 6 ký tự
+  [PASS] Số điện thoại sai
+         lỗi hiển thị: Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và có 10-11 chữ số): 912345678
+  [PASS] Họ tên để trống
+         lỗi hiển thị: Họ tên không được để trống
+  [PASS] các lần tạo thất bại không làm thêm tài khoản (vẫn 3 tài khoản)
+  [PASS] mở lại chương trình: tài khoản mới vẫn còn (lưu trong accounts.dat), không bị tạo lại dữ liệu mẫu
+
+=== TEST 3: Sách - tìm kiếm và sắp xếp (Comparable / Comparator) ===
+  [PASS] Tìm 'lap trinh' (không dấu) ra 'Lập trình Java cơ bản'
+  [PASS] Tìm theo mã 's005' (không phân biệt hoa thường)
+  [PASS] Tìm 'dữ liệu' ra 2 sách (có dấu)
+  [PASS] Từ khóa không khớp -> rỗng
+  [PASS] Từ khóa rỗng -> rỗng
+  [PASS] Sắp xếp theo tên (Comparable) đúng thứ tự, đầu tiên là 'Cấu trúc dữ liệu...'
+  [PASS] Sắp xếp theo số lượng giảm dần (Comparator), đầu tiên là S010 (8 cuốn)
+  [PASS] Sắp xếp theo giá tăng dần, rẻ nhất là S010 (60.000đ)
+  [PASS] Sắp xếp trên bản sao, không đổi thứ tự lưu trữ
+
+=== TEST 4: Sách - thêm / sửa / xóa / kiểm tra số lượng ===
+  [PASS] Thêm sách: mã tự sinh S013, tên được trim
+  [PASS] Thêm sách tên rỗng
+         lỗi hiển thị: Tên sách không được để trống
+  [PASS] Thêm sách số lượng âm
+         lỗi hiển thị: Số lượng sách không được âm
+  [PASS] Thêm sách giá trị âm
+         lỗi hiển thị: Giá trị sách không được âm
+  [PASS] Sửa sách cập nhật đúng
+  [PASS] Sửa sách không tồn tại
+         lỗi hiển thị: Không tìm thấy sách có mã: S999
+  [PASS] Xóa sách đang có phiếu mượn chưa trả (S001)
+         lỗi hiển thị: Không thể xóa sách S001 vì đang có phiếu mượn chưa trả chứa sách này
+  [PASS] Xóa sách không còn phiếu mượn (S005) thành công
+  [PASS] Xóa sách không tồn tại
+         lỗi hiển thị: Không tìm thấy sách có mã: S005
+  [PASS] Kiểm tra số lượng: S012 (hết) không đủ
+  [PASS] Kiểm tra số lượng: S010 còn 8, mượn 8 đủ
+  [PASS] Kiểm tra số lượng: S010 còn 8, mượn 9 không đủ
+
+=== TEST 5: Bạn đọc - thêm / sửa / xóa / tìm / sắp xếp ===
+  [PASS] Thêm SV ưu tiên: mã UT03, đúng lớp con, tối đa 5 cuốn
+  [PASS] Thêm giảng viên: mã GV03, đúng lớp con
+  [PASS] Thêm bạn đọc SĐT sai định dạng
+         lỗi hiển thị: Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và có 10-11 chữ số): 123
+  [PASS] Thêm bạn đọc họ tên rỗng
+         lỗi hiển thị: Họ tên không được để trống
+  [PASS] Thêm bạn đọc loại không hợp lệ
+         lỗi hiển thị: Loại bạn đọc không hợp lệ: 9
+  [PASS] Tìm 'binh' (không dấu) ra 'Trần Thị Bình'
+  [PASS] Tìm 'gv' ra 3 giảng viên
+  [PASS] Sắp xếp bạn đọc theo tên gọi đúng thứ tự, đầu tiên là 'An'
+  [PASS] Sắp xếp theo mã: GV01 đứng đầu
+  [PASS] Sửa họ tên / SĐT cùng loại
+  [PASS] Đổi loại SV03 -> giảng viên: giữ mã, đổi lớp con, tối đa 10 cuốn
+  [PASS] Đổi loại bạn đọc đang mượn sách (SV01)
+         lỗi hiển thị: Bạn đọc SV01 đang mượn sách, không thể đổi loại bạn đọc
+  [PASS] Xóa bạn đọc đang mượn sách (SV01)
+         lỗi hiển thị: Không thể xóa bạn đọc SV01 vì đang mượn sách chưa trả
+  [PASS] Xóa bạn đọc không còn mượn sách (SV03) thành công
+  [PASS] Xóa bạn đọc không tồn tại
+         lỗi hiển thị: Không tìm thấy bạn đọc có mã: SV03
+
+=== TEST 6: Mượn - trả bằng AppContext rồi kiểm tra thống kê ===
+  [PASS] Số đầu sách = 12, số cuốn trong kho = 41
+  [PASS] Số cuốn đang mượn = 3 (1 + 2)
+  [PASS] 2 phiếu đang mượn, 2 phiếu đã trả
+  [PASS] Tổng phí phạt = 30.000đ (20.000 + 10.000)
+         tổng phạt hiển thị: 30.000đ
+  [PASS] 1 phiếu quá hạn hôm nay (PM0001)
+  [PASS] Phiếu mẫu PM0001 (SV thường) có hạn 14 ngày và quá hạn đúng 6 ngày
+  [PASS] Tính quá hạn với ngày giả định cách đây 40 ngày: chưa có phiếu nào quá hạn
+  [PASS] Top sách mượn nhiều: S001 (2 cuốn) đứng đầu, giới hạn 2 phần tử
+  [PASS] Bạn đọc theo loại: 3 / 2 / 2
+  [PASS] Sau khi mượn thêm: đang mượn 4 cuốn, kho 40, mã phiếu PM0005
+  [PASS] Trả PM0001 (quá hạn 6 ngày, SV thường): phí phạt tổng tăng thêm 30.000đ => 60.000đ
+  [PASS] Không còn phiếu quá hạn sau khi trả
+
+=== TEST 7: Khởi động lại - đọc file .dat, KHÔNG ghi đè bằng dữ liệu mẫu ===
+  [PASS] Số phiếu mượn sau khi mở lại = 5 (không bị reset về 4)
+  [PASS] Phiếu PM0001 vẫn ở trạng thái Đã trả với phí phạt 30.000đ
+  [PASS] Đăng nhập vẫn dùng được sau khi mở lại
+  [PASS] Dữ liệu đã sửa ở TEST 4/5 được lưu: không còn S005, có S013, có GV03
+
+=== TEST 8: Tiện ích (Validator, TextUtils, DateFormatter, IdGenerator) ===
+  [PASS] SĐT hợp lệ 0901234567
+  [PASS] SĐT sai: thiếu số / không bắt đầu bằng 0 / có chữ
+  [PASS] removeAccents: 'Đại số tuyến tính' -> 'Dai so tuyen tinh'
+  [PASS] lastWord: 'Nguyễn Văn An' -> 'An'
+  [PASS] Parse ngày 1/11/2026 và hiển thị 01/11/2026
+  [PASS] Ngày không có thật 31/02/2026
+         lỗi hiển thị: Text '31/02/2026' could not be parsed: Invalid date 'FEBRUARY 31'
+  [PASS] MoneyFormatter 1234567 -> 1.234.567đ
+  [PASS] IdGenerator: danh sách rỗng -> PM0001 / S001 / SV01
+
+==============================
+KẾT QUẢ: 81 đạt, 0 lỗi
+==============================
+exit ManagementTest: 0

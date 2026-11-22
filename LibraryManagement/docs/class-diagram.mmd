@@ -1,0 +1,135 @@
+%% Sơ đồ lớp - dán vào https://mermaid.live để xuất ảnh PNG/SVG (Hình 3.1 trong báo cáo)
+classDiagram
+    direction TB
+
+    class User {
+        <<abstract>>
+        -String id
+        -String fullName
+        -String phone
+        +getRoleName()* String
+    }
+    class Reader {
+        <<abstract>>
+        +getReaderType()* String
+        +getMaxBooks()* int
+        +getBorrowDays()* int
+        +getFinePolicy()* FinePolicy
+    }
+    class StudentReader
+    class PriorityStudentReader
+    class LecturerReader
+    class Librarian {
+        -String username
+        -String passwordHash
+        +checkPassword(String) boolean
+    }
+
+    class FinePolicy {
+        <<interface>>
+        +calculateFine(int lateDays) double
+        +getRatePerDay() double
+    }
+    class NormalStudentFinePolicy
+    class PriorityStudentFinePolicy
+    class LecturerFinePolicy
+
+    class Borrowable {
+        <<interface>>
+        +isAvailable(int) boolean
+        +decrease(int) void
+        +increase(int) void
+    }
+    class Book {
+        -String bookId
+        -String title
+        -String author
+        -String category
+        -int quantity
+        -double price
+        +compareTo(Book) int
+    }
+
+    class BorrowTicket {
+        -String ticketId
+        -String readerId
+        -LocalDate borrowDate
+        -LocalDate dueDate
+        -TicketStatus status
+        -ArrayList~BorrowTicketDetail~ details
+        -ReturnRecord returnRecord
+    }
+    class BorrowTicketDetail {
+        -String bookId
+        -int quantity
+    }
+    class ReturnRecord {
+        -LocalDate returnDate
+        -int lateDays
+        -double fine
+    }
+    class TicketStatus {
+        <<enumeration>>
+        DANG_MUON
+        DA_TRA
+    }
+
+    class BaseRepository~T~ {
+        <<abstract>>
+        -ArrayList~T~ items
+        +load() void
+        +save() void
+        +add(T) void
+        +remove(T) boolean
+    }
+    class BookRepository
+    class ReaderRepository
+    class TicketRepository
+    class AccountRepository
+
+    class BorrowService
+    class ReturnService
+    class BookService
+    class ReaderService
+    class StatisticService
+    class AuthService
+    class ReaderInfoService
+    class SampleDataService
+
+    class LibraryException {
+        <<exception>>
+    }
+
+    User <|-- Reader
+    User <|-- Librarian
+    Reader <|-- StudentReader
+    Reader <|-- PriorityStudentReader
+    Reader <|-- LecturerReader
+
+    FinePolicy <|.. NormalStudentFinePolicy
+    FinePolicy <|.. PriorityStudentFinePolicy
+    FinePolicy <|.. LecturerFinePolicy
+    Borrowable <|.. Book
+    Reader ..> FinePolicy : getFinePolicy()
+
+    BorrowTicket "1" *-- "many" BorrowTicketDetail
+    BorrowTicket "1" o-- "0..1" ReturnRecord
+    BorrowTicket --> TicketStatus
+
+    BaseRepository <|-- BookRepository
+    BaseRepository <|-- ReaderRepository
+    BaseRepository <|-- TicketRepository
+    BaseRepository <|-- AccountRepository
+
+    BorrowService ..> BookRepository
+    BorrowService ..> ReaderRepository
+    BorrowService ..> TicketRepository
+    ReturnService ..> TicketRepository
+    ReturnService ..> FinePolicy
+    BookService ..> BookRepository
+    ReaderService ..> ReaderRepository
+    StatisticService ..> TicketRepository
+    AuthService ..> AccountRepository
+    ReaderInfoService ..> Reader : instanceof / ép kiểu
+    BorrowService ..> LibraryException : ném lỗi nghiệp vụ
+    ReturnService ..> LibraryException : ném lỗi nghiệp vụ
